@@ -1,0 +1,21 @@
+package com.practise.mockito.repo;
+
+import java.util.List;
+
+import com.practise.mockito.dto.Book;
+
+public class FakeBookRepository implements BookRepositories {
+
+	@Override
+	public List<Book> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveBook(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.practise.mockito.service;
+
+import java.util.List;
+
+import com.practise.mockito.dto.Book;
+import com.practise.mockito.repo.BookRepositories;
+
+public class BookService {
+	
+	private BookRepositories bookRepo;
+
+	public BookService(BookRepositories bookRepo) {
+		this.bookRepo = bookRepo;
+	}
+	
+	public void addBook(Book book) {
+		if(book == null) {
+			return;
+		}
+		bookRepo.saveBook(book);
+	}
+	
+	public List<Book> findAll() throws DataNotFoundException {
+		try {
+			List<Book> books = bookRepo.findAll();
+			if(books != null) {
+				return books;
+			}
+		} catch (Exception e) {
+			throw new DataNotFoundException("No books availabe in the DB" + e.getMessage());
+		}
+		return null;
+	}
+	
+	public int numberOfBooks() {
+		return bookRepo.findAll().size();
+	}
+	
+	public List<Book> getNewDiscount(int discount, int days) {
+		List<Book> bookfromDB = bookRepo.findNewBooks(days);
+		
+		for(Book book : bookfromDB) {
+			int price = book.getPrice();
+			int newPrice = price - (discount-price/100);
+			book.setPrice(newPrice);
+		}
+		return bookfromDB;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.practise.mockito.service;
+
+public class DataBaseWriteException extends RuntimeException {
+	
+	public DataBaseWriteException(String msg) {
+		// TODO Auto-generated constructor stub
+		
+		super(msg);
+	}
+}

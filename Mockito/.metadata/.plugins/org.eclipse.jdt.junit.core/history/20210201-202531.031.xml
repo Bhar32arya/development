@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookServiceTest" project="mockito" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.practise.mockito.service.BookServiceTest" time="0.348" displayname="BookServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]">
+    <testcase name="getNewDiscountTest" classname="com.practise.mockito.service.BookServiceTest" time="0.317" displayname="getNewDiscountTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:getNewDiscountTest()]"/>
+    <testcase name="numberOfBooksTest" classname="com.practise.mockito.service.BookServiceTest" time="0.0" displayname="numberOfBooksTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:numberOfBooksTest()]"/>
+    <testcase name="addBooksTest" classname="com.practise.mockito.service.BookServiceTest" time="0.016" displayname="addBooksTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksTest()]"/>
+    <testcase name="addBooksNullTest" classname="com.practise.mockito.service.BookServiceTest" time="0.015" displayname="addBooksNullTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksNullTest()]"/>
+  </testsuite>
+</testrun>

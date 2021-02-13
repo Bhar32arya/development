@@ -1,0 +1,29 @@
+package com.practise.mockito.dto;
+
+public class Book {
+	
+	private int bookId;
+	private String bookTitle;
+	public int getBookId() {
+		return bookId;
+	}
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+	public String getBookName() {
+		return bookTitle;
+	}
+	public void setBookName(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+	public Book(int bookId, String bookTitle) {
+		super();
+		this.bookId = bookId;
+		this.bookTitle = bookTitle;
+	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookName=" + bookTitle + "]";
+	}
+
+}

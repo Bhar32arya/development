@@ -1,0 +1,50 @@
+package com.practise.mockito.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import com.practise.mockito.dto.Book;
+import com.practise.mockito.repo.BookRepositories;
+
+class BookServiceTest {
+	
+	
+	@Test
+	public void numberOfBooksTest() {
+		
+		BookRepositories repositories = Mockito.mock(BookRepositories.class);
+		BookService bookService = new BookService(repositories);
+		
+		Book one = new Book(1, "bharat", LocalDate.now(), 250);
+		Book two = new Book(2, "arya", LocalDate.now(), 500);
+		
+		List<Book> books = new ArrayList<Book>();
+		books.add(one);
+		books.add(two);
+		
+		when(repositories.findAll()).thenReturn(books);
+		
+		
+		assertEquals(2, bookService.numberOfBooks());
+		
+	}
+	
+	
+	@Test
+	public void addBooksTest() {
+		
+		BookRepositories bookRepositories = Mockito.mock(BookRepositories.class);
+		BookService bookService = new BookService(bookRepositories);
+		
+		Book one = new Book(1, "bharat", LocalDate.now(), 250);
+		Mockito.verify(bookService, Mockito.times(1)).saveBook(one);
+		
+	}
+}

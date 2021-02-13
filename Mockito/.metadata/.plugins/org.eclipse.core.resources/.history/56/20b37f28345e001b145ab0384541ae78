@@ -1,0 +1,15 @@
+package com.practise.mockito.service;
+
+import com.practise.mockito.repo.BookRepositories;
+
+public class BookService {
+	
+	private BookRepositories bookRepo;
+
+	public BookService(BookRepositories bookRepo) {
+		this.bookRepo = bookRepo;
+	}
+	
+	
+
+}

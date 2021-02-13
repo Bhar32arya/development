@@ -1,0 +1,35 @@
+package com.practise.mockito.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.practise.mockito.repo.FakeBookRepository;
+
+class BookServiceTest {
+	
+	BookRepositories bookRepo= new FakeBookRepository();
+	
+	BookService bookService = new BookService(bookRepo);
+
+	@Test
+	void testBookService() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testAddBook() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFindAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testNumberOfBooks() {
+		fail("Not yet implemented");
+	}
+
+}

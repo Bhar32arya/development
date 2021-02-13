@@ -1,0 +1,12 @@
+package com.practise.mockito.service;
+
+import org.junit.jupiter.api.Test;
+
+class BookServiceTest {
+	
+	
+	@Test
+	public void saveTest() {
+		
+	}
+}

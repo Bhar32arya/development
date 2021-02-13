@@ -1,0 +1,9 @@
+package com.practise.mockito.service;
+
+import com.practise.mockito.repo.BookRepositories;
+
+public interface BookService {
+	
+	private BookRepositories bookRepo;
+
+}

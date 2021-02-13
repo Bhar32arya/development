@@ -1,0 +1,7 @@
+package com.practise.mockito.repo;
+
+public interface BookRepositories {
+	
+	void save();
+
+}

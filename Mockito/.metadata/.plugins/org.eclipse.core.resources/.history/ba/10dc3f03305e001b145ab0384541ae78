@@ -1,0 +1,5 @@
+package com.practise.mockito.demo;
+
+public class BookService {
+
+}

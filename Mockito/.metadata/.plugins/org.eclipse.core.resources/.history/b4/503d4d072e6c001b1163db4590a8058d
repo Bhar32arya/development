@@ -1,0 +1,103 @@
+package com.practise.mockito.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
+import static org.mockito.Mockito.when;
+
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.practise.mockito.dto.Book;
+import com.practise.mockito.repo.BookRepositories;
+
+
+@ExtendWith(MockitoExtension.class)
+class BookServiceTest {
+	
+	@InjectMocks
+	BookService bookService;
+	
+	@Mock
+	private BookRepositories bookRepositories;
+	
+	@Test
+	public void numberOfBooksTest() throws SQLException {
+		
+		
+		Book one = new Book(1, "bharat", LocalDate.now(), 250);
+		Book two = new Book(2, "arya", LocalDate.now(), 500);
+		
+		List<Book> books = new ArrayList<Book>();
+		books.add(one);
+		books.add(two);
+		
+		when(bookRepositories.findAll()).thenReturn(books);
+		
+		
+		assertEquals(2, bookService.numberOfBooks());
+		
+	}
+	
+	@Test
+	public void getNewDiscountTest() {
+		
+		Book one = new Book(1, "bharat", LocalDate.now(), 250);
+		Book two = new Book(2, "arya", LocalDate.now(), 500);
+		
+		List<Book> books = new ArrayList<Book>();
+		books.add(one);
+		books.add(two);
+		when(bookRepositories.findNewBooks(5)).thenReturn(books);
+		
+		List<Book> booksFromDB = bookService.getNewDiscount(100, 5);
+		
+		assertEquals(2, booksFromDB.size());
+		
+	}
+	
+	
+	@Test
+	public void addBooksTest() {
+		
+		BookService bookService = new BookService(bookRepositories);
+		
+		Book one = new Book(1, "bharat", LocalDate.now(), 250);
+		
+		bookService.addBook(one);
+		verify(bookRepositories, times(1)).saveBook(one);
+		
+	}
+	
+	@Test
+	public void addBooksNullTest() {
+		
+		BookService bookService = new BookService(bookRepositories);
+		
+		Book one = null;
+		
+		bookService.addBook(one);
+		verifyNoInteractions(bookRepositories);
+		verifyNoMoreInteractions(bookRepositories);
+		
+	}
+	
+	@Test
+	public void getAllBooksException() throws SQLException{
+		
+		when(bookRepositories.findAll()).thenThrow(SQLException.class);
+		
+		assertThrows(DataNotFoundException.class, ()-> bookService.findAll());
+	}
+}

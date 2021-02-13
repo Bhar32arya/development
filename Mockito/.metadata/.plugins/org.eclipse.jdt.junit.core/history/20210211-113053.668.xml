@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookServiceTest.addBooksTestException" project="mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.practise.mockito.service.BookServiceTest" time="0.751" displayname="BookServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]">
+    <testcase name="addBooksTestException" classname="com.practise.mockito.service.BookServiceTest" time="0.751" displayname="addBooksTestException()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksTestException()]"/>
+  </testsuite>
+</testrun>

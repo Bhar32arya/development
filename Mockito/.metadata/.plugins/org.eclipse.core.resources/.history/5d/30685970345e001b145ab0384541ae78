@@ -1,0 +1,25 @@
+package com.practise.mockito.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.practise.mockito.dto.Book;
+import com.practise.mockito.repo.BookRepositories;
+
+public class BookService {
+	
+	private BookRepositories bookRepo;
+
+	public BookService(BookRepositories bookRepo) {
+		this.bookRepo = bookRepo;
+	}
+	
+	public void addBook(Book book) {
+		bookRepo.save(book);
+	}
+	
+	public List<Book> findAll() {
+		return bookRepo.findAll();
+	}
+
+}

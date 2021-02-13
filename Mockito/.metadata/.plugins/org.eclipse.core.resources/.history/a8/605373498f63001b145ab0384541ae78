@@ -1,0 +1,48 @@
+package com.practise.mockito.dto;
+
+import java.time.LocalDate;
+
+public class Book {
+	
+	private int bookId;
+	private String bookTitle;
+	private LocalDate date;
+	private int price;
+	public int getBookId() {
+		return bookId;
+	}
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+	public String getBookTitle() {
+		return bookTitle;
+	}
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public Book(int bookId, String bookTitle, LocalDate date, int price) {
+		super();
+		this.bookId = bookId;
+		this.bookTitle = bookTitle;
+		this.date = date;
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookTitle=" + bookTitle + ", date=" + date + ", price=" + price + "]";
+	}
+	
+
+}

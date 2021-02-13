@@ -1,0 +1,8 @@
+package com.practise.mockito.service;
+
+public class DataNotFoundException extends RuntimeException {
+
+	public DataNotFoundException(String message) {
+	}
+
+}

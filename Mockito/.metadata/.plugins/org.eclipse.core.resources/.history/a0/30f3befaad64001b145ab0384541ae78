@@ -1,0 +1,9 @@
+package com.practise.mockito.service;
+
+public class DataNotFoundException extends Exception {
+
+	public DataNotFoundException(String message) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

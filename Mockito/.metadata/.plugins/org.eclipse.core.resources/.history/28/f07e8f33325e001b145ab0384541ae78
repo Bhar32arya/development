@@ -1,0 +1,9 @@
+package com.practise.mockito.repo;
+
+import com.practise.mockito.dto.Book;
+
+public interface BookRepositories {
+	
+	void save(Book book);
+
+}

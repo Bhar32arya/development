@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookServiceTest" project="mockito" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.practise.mockito.service.BookServiceTest" time="0.794" displayname="BookServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]">
+    <testcase name="getNewDiscountTest" classname="com.practise.mockito.service.BookServiceTest" time="0.745" displayname="getNewDiscountTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:getNewDiscountTest()]"/>
+    <testcase name="getAllBooksException" classname="com.practise.mockito.service.BookServiceTest" time="0.009" displayname="getAllBooksException()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:getAllBooksException()]"/>
+    <testcase name="addBooksTestException" classname="com.practise.mockito.service.BookServiceTest" time="0.005" displayname="addBooksTestException()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksTestException()]"/>
+    <testcase name="numberOfBooksTest" classname="com.practise.mockito.service.BookServiceTest" time="0.003" displayname="numberOfBooksTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:numberOfBooksTest()]"/>
+    <testcase name="addBooksTest" classname="com.practise.mockito.service.BookServiceTest" time="0.014" displayname="addBooksTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksTest()]"/>
+    <testcase name="addBooksNullTest" classname="com.practise.mockito.service.BookServiceTest" time="0.018" displayname="addBooksNullTest()" uniqueid="[engine:junit-jupiter]/[class:com.practise.mockito.service.BookServiceTest]/[method:addBooksNullTest()]"/>
+  </testsuite>
+</testrun>
